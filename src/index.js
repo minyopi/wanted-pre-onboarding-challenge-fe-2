@@ -1,51 +1,32 @@
 /**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * Create todo.
+ * @param {string} content - The content of the todo list.
+ * @param {boolean} isFinished - Is the todo list Finished?
+ * @param {string} category - The category of the todo list.
+ * @param {Array<string>} tags - The tags which is related to todo list.
+ * @return {object} The data of todo list.
  */
-function Book(title, author) {}
+function createTodo(content, isFinished, category, tags) {}
 
 /**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
+ * Read todo.
+ * @return {object} The data of todo list.
  */
-function foo() {}
-
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
- */
-function bar() {}
+function readTodo() {}
 
 /**
- * Generic dairy product.
- * @constructor
+ * Update todo.
+ * @param {string} id - The id of the todo list.
+ * @param {string} content - The content of the todo list.
+ * @param {boolean} isFinished - Is the todo list Finished?
+ * @param {string} category - The category of the todo list.
+ * @param {Array<string>} tags - The tags which is related to todo list.
+ * @return {object} The data of todo list.
  */
-function DairyProduct() {}
+function updateTodo(id, content, isFinished, category, tags) {}
 
 /**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
+ * Delete todo.
+ * @param {string} id - The id of todo list.
  */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
-
-/**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
- */
-function Milk() {}
-
-/**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
- */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+function deleteTodo(id) {}
